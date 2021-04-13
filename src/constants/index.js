@@ -1,2 +1,3 @@
-export { NAVIGATION } from '@/constants/navigation';
-export { STATUS } from '@/constants/status';
+export { IMAGES_NAME } from '@/constants/ImageName';
+export { SCREEN_NAME } from '@/constants/ScreenName';
+export { STATUS } from '@/constants/Status';

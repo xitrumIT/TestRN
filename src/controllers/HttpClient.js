@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Config } from 'react-native-config';
-import { strings } from '@/localization';
+import i18n from '@/locales';
 
 const client = axios.create({
   baseURL: Config.API_BASE_URL,
@@ -15,7 +15,9 @@ client.interceptors.response.use(
     if (error.response) {
       return Promise.reject(error.response.data);
     } else if (error.request) {
-      return Promise.reject({ error: strings.common.connectionError });
+      return Promise.reject({
+        error: i18n.t('connection_error'),
+      });
     } else {
       return Promise.reject(error);
     }

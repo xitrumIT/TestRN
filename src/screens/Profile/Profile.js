@@ -1,14 +1,13 @@
 import { useTheme } from '@react-navigation/native';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { useDispatch } from 'react-redux';
+import i18n from '@/locales';
 import { logout } from '@/actions/UserActions';
 import { Button } from '@/components';
-import { strings } from '@/localization';
-import { styles } from '@/screens/Profile/Profile.styles';
 import { TextStyles } from '@/theme';
 
-export function Profile() {
+const Profile = ({ navigation }) => {
   const { colors } = useTheme();
   const dispatch = useDispatch();
 
@@ -19,9 +18,22 @@ export function Profile() {
   return (
     <View style={styles.container}>
       <Text style={[TextStyles.title, styles.title, { color: colors.text }]}>
-        {strings.profile.message}
+        {/* {i18n.t('Setting')} */}
       </Text>
-      <Button title={strings.profile.logout} onPress={logoutUser} />
+      <Button title={i18n.t('Logout')} onPress={logoutUser} />
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    padding: 40,
+  },
+  title: {
+    textAlign: 'center',
+  },
+});
+
+export default Profile;

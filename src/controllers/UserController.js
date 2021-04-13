@@ -1,4 +1,4 @@
-import { strings } from '@/localization';
+import i18n from '@/locales';
 
 export class UserController {
   static async login(username, password) {
@@ -7,7 +7,7 @@ export class UserController {
         if (username && password) {
           resolve({ username });
         } else {
-          reject(new Error(strings.login.invalidCredentials));
+          reject(new Error(i18n.t('invalid_credentials')));
         }
       }, 500);
     });

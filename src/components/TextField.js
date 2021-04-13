@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export function TextField({ style, ...rest }) {
+const TextField = ({ style, ...rest }) => {
   const { colors } = useTheme();
 
   return (
@@ -22,7 +22,7 @@ export function TextField({ style, ...rest }) {
       {...rest}
     />
   );
-}
+};
 
 TextField.propTypes = {
   style: PropTypes.object,
@@ -31,3 +31,4 @@ TextField.propTypes = {
 TextField.defaultProps = {
   style: null,
 };
+export default TextField;

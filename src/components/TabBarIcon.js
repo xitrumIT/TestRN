@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Image } from 'react-native';
-import { homeIcon, settingsIcon } from '@/assets';
-import { NAVIGATION } from '@/constants';
+import { SCREEN_NAME, IMAGES_NAME } from '@/constants';
 
 const tabIcon = {
-  [NAVIGATION.home]: homeIcon,
-  [NAVIGATION.profile]: settingsIcon,
+  [SCREEN_NAME.HOME_SCREEN]: IMAGES_NAME.ICON_HOME,
+  [SCREEN_NAME.SETTINGS_SCREEN]: IMAGES_NAME.ICON_SETTINGS,
 };
 
-export function TabBarIcon({ color, routeName }) {
+const TabBarIcon = ({ color, routeName }) => {
   return (
     <Image
       accessibilityIgnoresInvertColors
@@ -17,9 +16,10 @@ export function TabBarIcon({ color, routeName }) {
       style={{ tintColor: color }}
     />
   );
-}
+};
 
 TabBarIcon.propTypes = {
   color: PropTypes.string.isRequired,
   routeName: PropTypes.string.isRequired,
 };
+export default TabBarIcon;

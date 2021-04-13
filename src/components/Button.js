@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export function Button({ style, textStyle, title, ...rest }) {
+const Button = ({ style, textStyle, title, ...rest }) => {
   const { colors } = useTheme();
 
   return (
@@ -28,7 +28,7 @@ export function Button({ style, textStyle, title, ...rest }) {
       </Text>
     </TouchableOpacity>
   );
-}
+};
 
 Button.propTypes = {
   style: PropTypes.object,
@@ -40,3 +40,4 @@ Button.defaultProps = {
   style: null,
   textStyle: null,
 };
+export default Button;
