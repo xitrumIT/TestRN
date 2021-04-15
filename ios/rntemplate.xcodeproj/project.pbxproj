@@ -13,7 +13,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		36E72209B083AA8FC78A345A /* libPods-RNTemplate-Development.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */; };
 		666B78041AFB4C6259851A72 /* libPods-RNTemplate-Production.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF299DC80FF3AB298BE4203 /* libPods-RNTemplate-Production.a */; };
-		70998F4026254189001D3477 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70998F3F26254189001D3477 /* File.swift */; };
+		70B408F72626DC700002EC86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B408F62626DC700002EC86 /* File.swift */; };
+		70B408F82626DC700002EC86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B408F62626DC700002EC86 /* File.swift */; };
+		70B408F92626DC700002EC86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B408F62626DC700002EC86 /* File.swift */; };
 		720A9CC025E5A9D40074D6D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		720A9CC125E5A9D40074D6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		720A9CC525E5A9D40074D6D5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */; };
@@ -38,7 +40,9 @@
 		51EF12BEC02FB6AD06CE78F0 /* libPods-RNTemplate-Staging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Staging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Development.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70998F3E26254189001D3477 /* Production-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Production-Bridging-Header.h"; sourceTree = "<group>"; };
-		70998F3F26254189001D3477 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		70B408F42626DC6F0002EC86 /* Development-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Development-Bridging-Header.h"; sourceTree = "<group>"; };
+		70B408F52626DC6F0002EC86 /* Staging-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Staging-Bridging-Header.h"; sourceTree = "<group>"; };
+		70B408F62626DC700002EC86 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		720A9CCE25E5A9D40074D6D5 /* Info-Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Development.plist"; path = "rntemplate/Info-Development.plist"; sourceTree = "<group>"; };
 		72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,13 +134,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				70998F3F26254189001D3477 /* File.swift */,
+				70B408F62626DC700002EC86 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* rntemplate */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7F96445D4E518E57EA59E7D3 /* Pods */,
 				70998F3E26254189001D3477 /* Production-Bridging-Header.h */,
+				70B408F42626DC6F0002EC86 /* Development-Bridging-Header.h */,
+				70B408F52626DC6F0002EC86 /* Staging-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -232,6 +238,12 @@
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1240;
+					};
+					720A9CBC25E5A9D40074D6D5 = {
+						LastSwiftMigration = 1240;
+					};
+					72C7E06E25E5AB5600C8F72C = {
 						LastSwiftMigration = 1240;
 					};
 				};
@@ -562,7 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				70998F4026254189001D3477 /* File.swift in Sources */,
+				70B408F72626DC700002EC86 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				720A9CC025E5A9D40074D6D5 /* AppDelegate.m in Sources */,
+				70B408F82626DC700002EC86 /* File.swift in Sources */,
 				720A9CC125E5A9D40074D6D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C7E07225E5AB5600C8F72C /* AppDelegate.m in Sources */,
+				70B408F92626DC700002EC86 /* File.swift in Sources */,
 				72C7E07325E5AB5600C8F72C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.development;
 				PRODUCT_NAME = RNTemplateDevelopment;
+				SWIFT_OBJC_BRIDGING_HEADER = "Development-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -691,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.development;
 				PRODUCT_NAME = RNTemplateDevelopment;
+				SWIFT_OBJC_BRIDGING_HEADER = "Development-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -717,6 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.staging;
 				PRODUCT_NAME = RNTemplateStaging;
+				SWIFT_OBJC_BRIDGING_HEADER = "Staging-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -744,6 +761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.staging;
 				PRODUCT_NAME = RNTemplateStaging;
+				SWIFT_OBJC_BRIDGING_HEADER = "Staging-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

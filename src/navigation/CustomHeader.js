@@ -5,16 +5,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useSelector } from 'react-redux';
 import React from 'react';
 
 import { DrawerActions } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { getUser } from '@/selectors/UserSelectors';
 
-const CustomHeader = ({ isDrawer, isSettings, navigation, title }) => {
-  const user = useSelector(getUser);
-
+const CustomHeader = ({ isDrawer, navigation, title }) => {
   return (
     <View style={styles.container}>
       {/* {u.isEnabled?:} */}

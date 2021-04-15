@@ -1,10 +1,10 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 
-import CustomHeader from '../../navigators/CustomHeader';
 import React from 'react';
 import i18n from 'locales';
+import CustomHeader from '../../navigators/CustomHeader';
 
-const NotificationsScreen = ({navigation}) => {
+const NotificationsScreen = ({ navigation }) => {
   return (
     <View style={[styles.container]}>
       <CustomHeader title={i18n.t('Notification')} navigation={navigation} />
@@ -14,7 +14,7 @@ const NotificationsScreen = ({navigation}) => {
     </View>
   );
 };
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -2,7 +2,6 @@ import {
   ActivityIndicator,
   Alert,
   Dimensions,
-  Image,
   StyleSheet,
   Text,
   TextInput,
@@ -14,7 +13,7 @@ import React, { useState } from 'react';
 import LottieView from 'lottie-react-native';
 // import auth from '@react-native-firebase/auth';
 import i18n from '@/locales';
-import SCREEN_NAME from '@/constants/ScreenName';
+import { SCREEN_NAME } from '@/constants/ScreenName';
 // import CustomHeader from '../../navigators/CustomHeader';
 
 const ForgotPasswordScreen = ({ navigation }) => {

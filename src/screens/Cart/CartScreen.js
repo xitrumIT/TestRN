@@ -6,12 +6,12 @@ import {
   View,
 } from 'react-native';
 
-import CustomHeader from '../../navigators/CustomHeader';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
-import i18n from 'locales';
+import CustomHeader from '@/screens/CustomHeader';
+import i18n from '@/locales';
 
-const CartScreen = ({navigation}) => {
+const CartScreen = ({ navigation }) => {
   return (
     <View style={[styles.container]}>
       <CustomHeader
@@ -22,7 +22,8 @@ const CartScreen = ({navigation}) => {
       <View style={styles.viewContent}>
         <TouchableOpacity
           onPress={() => navigation.navigate('HomeDetail')}
-          style={styles.viewTouch}>
+          style={styles.viewTouch}
+        >
           <Text style={styles.textContent}>Cart Screen!</Text>
           <Ionicons name="cart" size={25} color="#5B37B7" />
         </TouchableOpacity>
@@ -30,7 +31,7 @@ const CartScreen = ({navigation}) => {
     </View>
   );
 };
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,

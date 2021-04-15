@@ -1,19 +1,19 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 
-import CustomHeader from '../../navigators/CustomHeader';
 import React from 'react';
+// import CustomHeader from '../../navigators/CustomHeader';
 
-const SplashScreen = ({navigation}) => {
+const SplashScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <CustomHeader title="SplashScreen" navigation={navigation} />
+      {/* <CustomHeader title="SplashScreen" navigation={navigation} /> */}
       <View style={styles.viewContent}>
         <Text style={styles.textContent}>SplashScreen!</Text>
       </View>
     </View>
   );
 };
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,

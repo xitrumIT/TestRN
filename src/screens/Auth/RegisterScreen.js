@@ -1,27 +1,22 @@
 import {
   Alert,
   Dimensions,
-  Image,
-  Keyboard,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import React, { useContext, useEffect, useState } from 'react';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { KeyboardAwareScrollView } from '@codler/react-native-keyboard-aware-scroll-view';
 import LottieView from 'lottie-react-native';
 // import {UserContext} from '../../context/user';
 // import auth from '@react-native-firebase/auth';
 import i18n from '@/locales';
-import SCREEN_NAME from '../../constants/ScreenName';
-import IMAGES_NAME from '../../constants/ImageName';
+import { SCREEN_NAME, IMAGES_NAME } from '@/constants';
 
 const RegisterScreen = ({ navigation }) => {
   // const u = useContext(UserContext);
@@ -150,7 +145,14 @@ const RegisterScreen = ({ navigation }) => {
               />
             </TouchableOpacity>
           </View>
-          <Text style={styles.forgotPassword}>{i18n.t('forgot_password')}</Text>
+          <Text
+            style={styles.forgotPassword}
+            onPress={() => {
+              navigation.navigate(SCREEN_NAME.FORGOT_PASSWORD_SCREEN);
+            }}
+          >
+            {i18n.t('forgot_password')}
+          </Text>
         </View>
         <View style={styles.blockBottom}>
           <TouchableOpacity

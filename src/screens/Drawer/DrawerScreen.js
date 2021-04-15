@@ -1,6 +1,5 @@
 import {
   Dimensions,
-  Image,
   ImageBackground,
   Platform,
   ScrollView,
@@ -9,31 +8,33 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useContext, useEffect} from 'react';
-
-import IMAGES_NAME from '../../constants/ImageName';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SCREEN_NAME from '../../constants/ScreenName';
-// import {UserContext} from '../../context/user';
-import auth from '@react-native-firebase/auth';
+import { logout } from '@/actions/UserActions';
+// import auth from '@react-native-firebase/auth';
 
-const DrawerScreen = ({navigation}) => {
-  // const u = useContext(UserContext);
+import { SCREEN_NAME, IMAGES_NAME } from '@/constants';
+
+const DrawerScreen = ({ navigation }) => {
+  const dispatch = useDispatch();
 
   const goLogout = async () => {
-    try {
-      await auth().signOut();
-      // navigation.navigate(SCREEN_NAME.LOGIN_SCREEN);
-    } catch (e) {
-      console.error(e);
-    }
+    dispatch(logout());
+    // try {
+    //   await auth().signOut();
+    //   // navigation.navigate(SCREEN_NAME.LOGIN_SCREEN);
+    // } catch (e) {
+    //   console.error(e);
+    // }
   };
 
   return (
     <View style={styles.container}>
       <ImageBackground
         source={IMAGES_NAME.BGR_AVT}
-        style={{height: 150, alignItems: 'center', justifyContent: 'center'}}>
+        style={{ height: 150, alignItems: 'center', justifyContent: 'center' }}
+      >
         {/* <Image
           source={{uri: UrlImage}}
           style={{height: 130, width: 130, borderRadius: 60}}
@@ -51,24 +52,26 @@ const DrawerScreen = ({navigation}) => {
         )} */}
       </ImageBackground>
 
-      <ScrollView style={{marginLeft: 5}}>
+      <ScrollView style={{ marginLeft: 5 }}>
         <TouchableOpacity
           style={{
             marginTop: 20,
             flexDirection: 'row',
             alignItems: 'center',
           }}
-          onPress={() => navigation.navigate(SCREEN_NAME.HOME_SCREEN)}>
+          onPress={() => navigation.navigate(SCREEN_NAME.HOME_SCREEN)}
+        >
           <Ionicons
             name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'}
             size={25}
             color="#28811e"
           />
-          <Text style={{marginLeft: 10}}>Menu Tab</Text>
+          <Text style={{ marginLeft: 10 }}>Menu Tab</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{marginTop: 20, flexDirection: 'row', alignItems: 'center'}}
-          onPress={() => navigation.navigate(SCREEN_NAME.NOTIFICATIONS_SCREEN)}>
+          style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center' }}
+          onPress={() => navigation.navigate(SCREEN_NAME.NOTIFICATIONS_SCREEN)}
+        >
           <Ionicons
             name={
               Platform.OS === 'ios' ? 'ios-notifications' : 'md-notifications'
@@ -76,7 +79,7 @@ const DrawerScreen = ({navigation}) => {
             size={25}
             color="#28811e"
           />
-          <Text style={{marginLeft: 10}}>Notifications</Text>
+          <Text style={{ marginLeft: 10 }}>Notifications</Text>
         </TouchableOpacity>
       </ScrollView>
 
@@ -89,8 +92,9 @@ const DrawerScreen = ({navigation}) => {
           }}
           onPress={() => {
             goLogout();
-          }}>
-          <Text style={{color: '#ed5565', fontWeight: 'bold'}}>Logout</Text>
+          }}
+        >
+          <Text style={{ color: '#ed5565', fontWeight: 'bold' }}>Logout</Text>
           <Ionicons
             name={Platform.OS === 'ios' ? 'ios-log-out' : 'md-log-out'}
             size={25}
@@ -101,7 +105,7 @@ const DrawerScreen = ({navigation}) => {
     </View>
   );
 };
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,

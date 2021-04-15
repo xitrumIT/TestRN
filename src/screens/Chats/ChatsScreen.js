@@ -6,13 +6,13 @@ import {
   View,
 } from 'react-native';
 
-import CustomHeader from '../../navigators/CustomHeader';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
-import SCREEN_NAME from '../../constants/ScreenName';
-import i18n from 'locales';
+import { SCREEN_NAME } from '@/constants/ScreenName';
+import i18n from '@/locales';
+import CustomHeader from '@/screens/CustomHeader';
 
-const ChatsScreen = ({navigation}) => {
+const ChatsScreen = ({ navigation }) => {
   return (
     <View style={[styles.container]}>
       <CustomHeader
@@ -22,8 +22,9 @@ const ChatsScreen = ({navigation}) => {
       />
       <View style={styles.viewContent}>
         <TouchableOpacity
-          onPress={() => navigation.navigate(SCREEN_NAME.NOTIFICATIONS_SCREEN)}
-          style={styles.viewTouch}>
+          onPress={() => navigation.navigate(SCREEN_NAME.CART_SCREEN)}
+          style={styles.viewTouch}
+        >
           <Text style={styles.textContent}>Chat Screen!</Text>
           <Ionicons name="chatbubbles-outline" size={25} color="#5B37B7" />
         </TouchableOpacity>
@@ -31,7 +32,7 @@ const ChatsScreen = ({navigation}) => {
     </View>
   );
 };
-const {width: WIDTH, height: HEIGHT} = Dimensions.get('window');
+const { width: WIDTH, height: HEIGHT } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
